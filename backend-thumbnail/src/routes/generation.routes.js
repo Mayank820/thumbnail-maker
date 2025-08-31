@@ -10,7 +10,6 @@ router.get('/health', (req, res) => {
 });
 
 // The main generation route.
-// It uses the upload middleware first, then passes the request to the controller.
 router.post('/generate', uploadMiddleware, handleThumbnailGeneration);
 
 export default router;

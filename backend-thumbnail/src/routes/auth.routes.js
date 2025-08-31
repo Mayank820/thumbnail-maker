@@ -4,9 +4,6 @@ import { signupUser, loginUser } from '../controllers/auth.controllers.js';
 
 const router = express.Router();
 
-// @route   POST api/auth/signup
-// @desc    Register a new user
-// @access  Public
 router.post(
   '/signup',
   [
@@ -16,9 +13,6 @@ router.post(
   signupUser
 );
 
-// @route   POST api/auth/login
-// @desc    Authenticate user & get token
-// @access  Public
 router.post(
   '/login',
   [

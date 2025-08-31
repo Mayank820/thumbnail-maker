@@ -81,6 +81,7 @@ export default function AppPage() {
     }
   };
 
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
   const { mutate: generateThumbnails, isPending } = useMutation({
     mutationFn: async (formData) => {
       const apiFormData = new FormData();
@@ -92,7 +93,7 @@ export default function AppPage() {
       apiFormData.append('instructions', formData.instructions);
       apiFormData.append('moods', JSON.stringify(formData.moods));
       apiFormData.append('brandColor', formData.brandColor);
-      const { data } = await axios.post('http://localhost:3001/api/generate', apiFormData);
+      const { data } = await axios.post(`${API_URL}/api/auth/generate`, apiFormData);
       return data;
     },
     onSuccess: (data) => {

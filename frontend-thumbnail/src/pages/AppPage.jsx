@@ -93,7 +93,7 @@ export default function AppPage() {
       apiFormData.append('instructions', formData.instructions);
       apiFormData.append('moods', JSON.stringify(formData.moods));
       apiFormData.append('brandColor', formData.brandColor);
-      const { data } = await axios.post(`${API_URL}/api/auth/generate`, apiFormData);
+      const { data } = await axios.post(`${API_URL}/api/generate`, apiFormData);
       return data;
     },
     onSuccess: (data) => {

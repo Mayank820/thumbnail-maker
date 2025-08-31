@@ -9,22 +9,29 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 connectDB();
 
+// --- CORS Configuration for Production ---
 const whitelist = [
-  'http://localhost:5173', // For local development
-  process.env.FRONTEND_URL, // The Vercel URL you will get after deployment
+  'http://localhost:5173',
+  process.env.FRONTEND_URL,
 ];
 
 const corsOptions = {
   origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
+    console.log('CORS check for origin:', origin);
+
+    if (!origin) return callback(null, true);
+    
+    // Check if the incoming origin is in our whitelist
+    if (whitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
+      console.error('Origin not allowed by CORS:', origin);
       callback(new Error('Not allowed by CORS'));
     }
   },
 };
 
-app.use(cors(corsOptions)); // Use the specific options
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
@@ -37,3 +44,4 @@ app.get('/api/health', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+

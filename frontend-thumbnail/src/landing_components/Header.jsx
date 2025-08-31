@@ -24,7 +24,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#features" className="text-gray-300 hover:text-white transition-colors duration-300">Features</a>
             <a href="#how-it-works" className="text-gray-300 hover:text-white transition-colors duration-300">How It Works</a>
-            <a href="https://github.com/your-username/your-repo" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">GitHub</a>
+            <a href="https://github.com/Mayank820/thumbnail-maker" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300">GitHub</a>
           </nav>
           <div className="flex items-center space-x-4">
             <button className="text-gray-300 hover:text-white transition-colors duration-300">Login</button>

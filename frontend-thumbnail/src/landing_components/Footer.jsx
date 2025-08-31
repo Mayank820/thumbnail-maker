@@ -9,8 +9,8 @@ export default function Footer() {
           Stop spending hours on design. Let's create something amazing together.
         </p>
         <div className="flex justify-center space-x-6 mt-8">
-          <a href="https://github.com/your-username/your-repo" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">GitHub</a>
-          <a href="https://your-gdrive-link-here" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">Sample Images</a>
+          <a href="https://github.com/Mayank820/thumbnail-maker" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">GitHub</a>
+          <a href="https://drive.google.com/drive/folders/13SMMq7RQe-F3PkyRfwgSKeJZIyg4bcej?usp=drive_link" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">Sample Images</a>
           <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
         </div>
         <p className="text-gray-500 mt-8 text-sm">&copy; 2025 Thumbnail AI. All rights reserved.</p>
